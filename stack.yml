@@ -1,0 +1,21 @@
+## YAML Template.
+---
+
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql
+   
+    command: --default-authentication-plugin=mysql_native_password
+   ports:
+  - 3306:3306
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: Tietieco900
+    
+   volume:
+       - microservices_projeto: /var/lib/mysql
+   volume:
+    microservices_projeto:   
